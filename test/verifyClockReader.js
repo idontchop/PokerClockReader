@@ -5,8 +5,8 @@ describe('Clock Reader Test', function () {
     
     it('should initiate', () => {
         
-        ClockReader.readImage("./images/3.jpg")
-            .then( ob => console.log(ob.data.lines[0]))
+        ClockReader.readImage("./images/2.jpg")
+            .then( ob => console.log(ob))
 
     }),
     it('test chipCount', () => {

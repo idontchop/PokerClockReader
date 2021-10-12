@@ -11,10 +11,14 @@ export default {
         await worker.loadLanguage('eng')
         await worker.initialize('eng')
         await worker.setParameters( {
-            tessedit_pageseg_mode: PSM.AUTO
+            tessedit_pageseg_mode: PSM.SINGLE_BLOCK,
+            tessedit_char_whitelist: "$0123456789.thstrdndRemainingPlaces",
+            load_system_dawg: false,
+            load_freq_dawg: false
+
         })
 
-        const text = await worker.recognize(image)
+        const { data: { text } } = await worker.recognize(image)
 
         await worker.terminate()
 
