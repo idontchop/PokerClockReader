@@ -1,0 +1,21 @@
+{
+  "name": "clock-reader",
+  "version": "1.0.0",
+  "description": "Read Poker Tournament Clocks",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -r esm"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "holdem-strings": "file:..\\holdem-strings"
+  }
+}
