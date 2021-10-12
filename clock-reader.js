@@ -1,10 +1,8 @@
-import Tesseract from 'tesseract.js'
 
-const { createWorker } = require ('tesseract.js')
+import  { createWorker } from 'tesseract.js'
+import PSM from 'tesseract.js/src/constants/PSM.js'
 
-export default {
-
-   
+export default {   
 
     readImage: async (image) => {
         const worker = createWorker()
@@ -12,6 +10,9 @@ export default {
         await worker.load()
         await worker.loadLanguage('eng')
         await worker.initialize('eng')
+        await worker.setParameters( {
+            tessedit_pageseg_mode: PSM.AUTO
+        })
 
         const text = await worker.recognize(image)
 

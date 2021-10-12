@@ -8,14 +8,21 @@
   "scripts": {
     "test": "mocha -r esm"
   },
+  "type": "module",
   "main": "index.js",
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.12.10"
+    "@babel/core": "^7.15.8"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "dependencies": {
     "esm": "^3.2.25",
-    "holdem-strings": "file:..\\holdem-strings"
+    "mocha": "^9.1.2",
+    "tesseract.js": "^2.1.5"
   }
 }
