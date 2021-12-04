@@ -1,0 +1,14 @@
+item {
+    id: 1
+    name: 'TournamentClock'
+}
+
+item {
+    id: 2
+    name: 'PlayersLeft'
+}
+
+item {
+    id: 3
+    name: 'Remaining'
+}
